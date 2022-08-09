@@ -316,7 +316,7 @@ export class BackLayerWebView<T extends ICommonCellInfo> extends Disposable {
 						filter: brightness(0) invert(1)
 					}
 
-					#container > div.nb-symbolHighlight {
+					#container .markup > div.nb-symbolHighlight {
 						background-color: var(--theme-notebook-symbol-highlight-background);
 					}
 
@@ -1397,7 +1397,7 @@ var requirejs = (function() {
 	}
 
 
-	deltaCellOutputContainerClassNames(cellId: string, added: string[], removed: string[]) {
+	deltaCellContainerClassNames(cellId: string, added: string[], removed: string[]) {
 		this._sendMessageToWebview({
 			type: 'decorations',
 			cellId,
